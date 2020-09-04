@@ -1,0 +1,16 @@
+bbb07b98df90978e770466f08044b548 *DESCRIPTION
+595d30f0bb9e5bd69a61eee530f06255 *LICENSE
+1fa16141bd9ce873a7d420482e4af51d *NAMESPACE
+b222f21e54929b2fa2ee453b4b297cfa *R/pagemap.R
+a3e0e2fcae18a33449ea5cc5aaacb95d *README.md
+c47165467329023ab922dc2e8b9f2c7b *build/vignette.rds
+e6ce9df991a1229d6e118df32e2c63d1 *inst/doc/pagemap.R
+eb19a61eba538b3dd1e24c0b1a1f8e39 *inst/doc/pagemap.Rmd
+582698e6396d2b08267329ed76a2aa89 *inst/doc/pagemap.html
+090748bc6b3247a5dd041a082d4095fe *inst/htmlwidgets/lib/pagemap-1.4.0/pagemap.min.js
+44fc0062db9b80680448bb9f9936f75c *inst/htmlwidgets/pagemap.js
+6b9fcf7d741fe557114bb8d36c71fd5c *inst/htmlwidgets/pagemap.yaml
+980d03d4bfeb302f9fbfadf4dd838062 *man/pagemap-shiny.Rd
+457ed5e6e042641b3ca9f3cd0aea1c8c *man/pagemap.Rd
+eb19a61eba538b3dd1e24c0b1a1f8e39 *vignettes/pagemap.Rmd
+3f7a0ec2ca7307795347df655508725c *vignettes/pagemap.png

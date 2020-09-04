@@ -1,0 +1,7 @@
+dependencies:
+  - name: pagemap
+    version: 1.4.0
+    src: htmlwidgets/lib/pagemap-1.4.0
+    script:
+      - pagemap.min.js
+    stylesheet:
