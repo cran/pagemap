@@ -11,7 +11,8 @@ pagemapR
 <!-- badges: start -->
 
 [![R build status](https://github.com/swsoyee/pagemapR/workflows/R-CMD-check/badge.svg)](https://github.com/swsoyee/pagemapR/actions)
-[![Github last commit](https://img.shields.io/github/last-commit/swsoyee/pagemapR?logo=github)](https://github.com/swsoyee/pagemapR)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/pagemap)](https://cran.r-project.org/package=pagemap)
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/pagemap)](https://cran.r-project.org/package=pagemap)
 <!-- badges: end -->
 
 Introduction
@@ -26,7 +27,11 @@ See a demonstration [here](https://swsoyee.github.io/pagemapR/).
 Installation
 ------------
 
-`pagemapR` is not on CRAN now (may be later), you can use [`devtools`](https://www.r-project.org/nosvn/pandoc/devtools.html) to install the latest development version.
+``` r
+install.packages("pagemap")
+```
+
+Or use [`devtools`](https://www.r-project.org/nosvn/pandoc/devtools.html) to install the latest development version.
 
 ``` r
 # install.packages("devtools")
@@ -39,27 +44,41 @@ Usage
 It’s very simple to use.
 
 ``` r
-pagemap::pagemap(id = "mini_map")
+library(pagemap)
+pagemap()
 ```
 
 You could fix it’s position on the screen and style by providing a `list` of css property.
 
 ``` r
-pagemap::pagemap(id = "mini_map",
-                 box_style = list(left = "5px", top = "10px"))
+pagemap(id = "mini_map",
+        box_style = list(left = "5px", top = "10px"))
 ```
 
 You could also customize the internal style of the mini map through the API provided by [`pagemap`](https://larsjung.de/pagemap/).
 
 ``` r
-pagemap::pagemap(
+pagemap(
   id = "mini_map",
   styles = list(
-    'h1,h2,a,code' = 'rgba(0,0,0,0.10)',
+    'h1,h2,a,code' = 'rgba(0, 0, 0, 0.10)',
     'img' = 'rgba(0, 0, 0, 0.08)',
-    'pre' = 'rgba(0,0,0,0.04)'
+    'pre' = 'rgba(0, 0, 0, 0.04)'
   )
 )
+```
+
+Or add a pagemap for your Shiny app:
+
+``` r
+if (interactive()) {
+  shinyApp(
+    ui = fluidPage(pagemapOutput("pagemap")),
+    server = function(input, output) {
+      output$pagemap <- renderPagemap(pagemap())
+    }
+  )
+}
 ```
 
 Credit
