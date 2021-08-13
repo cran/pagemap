@@ -4,15 +4,18 @@ if (!knitr::is_html_output(excludes = "markdown")) {
   logo_path <- "./vignettes/pagemap.png"
   cat("# pagemapR")
 } else {
-  library(devtools)
-  install_github('swsoyee/pagemapR', quiet = TRUE)
+  install.packages(
+    "pagemap",
+    repos = "http://cran.us.r-project.org",
+    quiet = TRUE
+  )
   logo_path <- "./pagemap.png"
 }
 
 ## ----logo, echo=FALSE, results='asis', eval=TRUE------------------------------
 cat(
   sprintf(
-    "<img src='%s' width='180' align='right' style='max-width:50%%;margin-left:20px;'>",
+    "<img src='%s' width='150' align='right'>",
     logo_path
   )
 )
@@ -22,15 +25,17 @@ cat(
 
 ## ----installation, eval=FALSE-------------------------------------------------
 #  # install.packages("devtools")
-#  devtools::install_github('swsoyee/pagemapR')
+#  devtools::install_github("swsoyee/pagemapR")
 
 ## ----usage, eval=FALSE--------------------------------------------------------
 #  library(pagemap)
 #  pagemap()
 
 ## ----box_style, eval=FALSE----------------------------------------------------
-#  pagemap(id = "mini_map",
-#          box_style = list(left = "5px", top = "10px"))
+#  pagemap(
+#    id = "mini_map",
+#    box_style = list(left = "5px", top = "10px")
+#  )
 
 ## ----loading pacakge, echo=FALSE----------------------------------------------
 library(pagemap)
@@ -39,9 +44,9 @@ library(pagemap)
 pagemap(
   id = "mini_map",
   styles = list(
-    'h1,h2,a,code' = 'rgba(0, 0, 0, 0.10)',
-    'img' = 'rgba(0, 0, 0, 0.08)',
-    'pre' = 'rgba(0, 0, 0, 0.04)'
+    "h1,h2,a,code" = "rgba(0, 0, 0, 0.10)",
+    "img" = "rgba(0, 0, 0, 0.08)",
+    "pre" = "rgba(0, 0, 0, 0.04)"
   )
 )
 
