@@ -2,17 +2,12 @@
 if (!knitr::is_html_output(excludes = "markdown")) {
   knitr::opts_chunk$set(eval = FALSE)
   logo_path <- "./vignettes/pagemap.png"
-  cat("# pagemapR")
 } else {
-  install.packages(
-    "pagemap",
-    repos = "http://cran.us.r-project.org",
-    quiet = TRUE
-  )
   logo_path <- "./pagemap.png"
 }
 
 ## ----logo, echo=FALSE, results='asis', eval=TRUE------------------------------
+cat("# pagemapR\n")
 cat(
   sprintf(
     "<img src='%s' width='150' align='right'>",
